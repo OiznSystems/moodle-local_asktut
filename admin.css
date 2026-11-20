@@ -1,0 +1,50 @@
+/* Ask Tut - Tut Admin look (same as the Dynamics 365 edition's Tut Admin: sticky header + Save, pill tabs that wrap, one card per tab) */
+:root{--ink:#1b1f2a;--muted:#5d6475;--line:#e3e6ee;--bg:#fbfaf7;--card:#fff;--lapis:#1F3A68;--gold:#C9962E;--goldsoft:#f6ecd6;--ok:#1f7a4d;--bad:#b3261e}
+.ta *{box-sizing:border-box}
+.ta{font:14px/1.45 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh;margin:0}
+.ta header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px 20px;background:var(--card);border-bottom:1px solid var(--line)}
+.ta header img{width:30px;height:30px;object-fit:contain}.ta header h1{font-size:17px;margin:0;color:var(--ink)}.ta header .s{color:var(--muted);font-size:12px}
+.ta header .sp{flex:1}.ta #status{font-size:12px;color:var(--muted)}.ta #status.bad{color:var(--bad)}.ta #status.ok{color:var(--ok)}
+.ta .btn{border:0;background:var(--lapis);color:#fff;border-radius:8px;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer}
+.ta .btn.ghost{background:#fff;color:var(--lapis);border:1px solid var(--lapis)}.ta .btn:disabled{opacity:.5;cursor:default}
+.ta main{max-width:1000px;margin:0 auto;padding:0 20px 40px;display:grid;gap:16px}
+.ta .tabs{position:sticky;top:55px;z-index:4;display:flex;flex-wrap:wrap;gap:6px;padding:10px 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.ta .tabs .sep{width:1px;align-self:stretch;background:#cfd4e0;margin:3px 6px}
+.ta .empty{color:var(--muted);font-size:12.5px;background:#f7f8fb;border:1px dashed var(--line);border-radius:8px;padding:9px 12px;margin:8px 0 0}.ta .empty[hidden]{display:none}
+.ta #pvResult table td:first-child{width:180px;color:var(--muted)}
+.ta .tabs .grp{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;align-self:center;margin:0 2px 0 8px}
+.ta .tabs button{border:1px solid var(--line);background:#fff;border-radius:16px;padding:6px 10px;white-space:nowrap;font:inherit;font-size:13px;color:var(--muted);cursor:pointer}
+.ta .tabs button:hover{color:var(--lapis);border-color:var(--lapis)}
+.ta .tabs button[aria-selected=true]{background:var(--lapis);border-color:var(--lapis);color:#fff;font-weight:600}
+.ta section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}.ta section[hidden]{display:none}
+.ta section h2{font-size:15px;margin:0 0 2px;color:var(--lapis)}.ta section h3{font-size:13px;margin:16px 0 6px;color:var(--ink)}.ta .hint{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.ta label.sw{display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin:6px 0}.ta label.sw small{color:var(--muted);display:block}
+.ta label.sw.inline{display:inline-flex;margin-right:18px}
+.ta input[type=text],.ta input[type=url],.ta input[type=number],.ta input[type=email],.ta select,.ta textarea{border:1px solid var(--line);border-radius:7px;padding:7px 9px;font:inherit;background:#fff;width:100%}
+.ta input.sm,.ta select.sm{width:auto;min-width:90px}.ta textarea{min-height:120px;resize:vertical}
+.ta table{width:100%;border-collapse:collapse}.ta th,.ta td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.ta th{font-size:12px;color:var(--muted);font-weight:600}.ta td.c,.ta th.c{text-align:center;width:90px}.ta td.n,.ta th.n{text-align:right}
+.ta .x{border:1px solid var(--line);background:#fff;border-radius:6px;cursor:pointer;color:var(--bad);padding:4px 9px}
+.ta .add{border:1px dashed var(--lapis);background:#fff;color:var(--lapis);border-radius:7px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px;margin-top:10px}
+.ta .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ta .grid2 label,.ta .fld label{font-size:12px;color:var(--muted);display:block;margin-bottom:3px}
+.ta .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.ta .avgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.ta .avcard{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;background:#fff}.ta .avcard.on{border-color:var(--lapis);box-shadow:0 0 0 3px var(--goldsoft)}
+.ta .avcard img{width:96px;height:96px;object-fit:contain;display:block;margin:0 auto}.ta .avcard input[type=text]{text-align:center;font-weight:600;margin-top:6px}
+.ta .avempty{width:96px;height:96px;margin:0 auto;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:10px;font-size:12px;color:#667}
+.ta .avsub{font-size:11px;color:var(--muted);margin:2px 0}.ta .avcard .use{display:inline-flex;gap:6px;align-items:center;margin-top:6px;font-size:13px;cursor:pointer}
+.ta .tiles{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 14px}.ta .tile{border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:140px;background:#fff}
+.ta .tile b{display:block;font-size:20px;color:var(--lapis)}.ta .tile span{font-size:12px;color:var(--muted)}
+.ta .ok{color:var(--ok)}.ta .bad{color:var(--bad)}.ta .pill{font-size:11px;border-radius:10px;padding:1px 8px;background:var(--goldsoft);border:1px solid #ead6a6;color:#6b5420}
+.ta .note{background:#f3f6fb;border:1px solid #d8e1f0;border-radius:8px;padding:10px 12px;font-size:13px;margin-top:10px}
+.ta .tsym i{font-style:normal;display:inline-block;margin:0 2px;font-size:18px}
+.ta .bar{height:8px;background:#eef1f6;border-radius:4px;overflow:hidden;margin-top:6px}.ta .bar i{display:block;height:100%;background:var(--lapis)}
+@media (max-width:760px){.ta .avgrid{grid-template-columns:repeat(2,1fr)}.ta .grid2{grid-template-columns:1fr}}
+/* Moodle: the page already has Moodle's own fixed top bar, so header and tabs scroll with the page; card look kept */
+.ta.mdl{min-height:0;background:transparent;margin:0 0 20px}
+.ta.mdl header{position:static;border:1px solid var(--line);border-radius:12px;margin-bottom:4px}
+.ta.mdl .tabs{position:static;border-bottom:0;padding:6px 0 10px}
+.ta.mdl .tabs a{border:1px solid var(--line);background:#fff;border-radius:16px;padding:6px 13px;white-space:nowrap;font-size:13px;color:var(--muted);text-decoration:none}
+.ta.mdl .tabs a:hover{color:var(--lapis);border-color:var(--lapis)}
+.ta.mdl main{max-width:none;padding:0}
+.ta.mdl section h2{font-size:16px}.ta.mdl .tiles{margin:12px 0}
